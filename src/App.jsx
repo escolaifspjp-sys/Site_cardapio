@@ -13,11 +13,11 @@ function Header() {
           Refeitório
         </NavLink>
 
-        <nav className="flex items-center gap-7 text-[11px]">
+        <nav className="flex items-center gap-7 text-[11px] ">
           <NavLink
             to="/"
             className={({ isActive }) =>
-              `rounded-full px-3 py-1 transition ${
+              `rounded-full px-3 py-1 transition-transform hover:-translate-y-1 transition-colors duration-400 hover:text-[#1b5737] ${
                 isActive ? "bg-[#e9f7ee] font-semibold text-[#087d3e]" : "text-[#77736d]"
               }`
             }
@@ -27,7 +27,7 @@ function Header() {
           <NavLink
             to="/cardapio"
             className={({ isActive }) =>
-              `rounded-full px-3 py-1 transition ${
+              `rounded-full px-3 py-1 transition-transform hover:-translate-y-1 transition-colors duration-400 hover:text-[#1b5737] ${
                 isActive ? "bg-[#e9f7ee] font-semibold text-[#087d3e]" : "text-[#77736d]"
               }`
             }

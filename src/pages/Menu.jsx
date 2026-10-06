@@ -1,4 +1,5 @@
 import { Refeicaos } from "../data/menu";
+import { CalendarIcon, HandPointingIcon } from "@phosphor-icons/react";
 
 function getCurrentDate() {
   return new Intl.DateTimeFormat("pt-BR", {
@@ -9,19 +10,21 @@ function getCurrentDate() {
 }
 
 function RefeicaoSection({ refeicao }) {
+
   return (
     <section className="mt-7">
       <div className="mb-4 flex items-center gap-2 border-b border-white pb-2">
         <h2 className="text-[14px] font-bold">
-          {refeicao.name} — {refeicao.time}
+           <CalendarIcon size={32} /> {refeicao.name} — {refeicao.time} — { refeicao.items.length } Brainrots 
         </h2>
       </div>
+
 
       <div className="grid grid-cols-3 gap-3">
         {refeicao.items.map((item) => (
           <article
             key={item.title}
-            className="overflow-hidden rounded-[8px] border border-amber-50 bg-white shadow-[0_5px_12px_rgba(8,125,62,0.08)] transition hover:shadow-[0_5px_12px_rgba(8,125,62,0.22)]"
+            className="overflow-hidden rounded-[8px] border border-amber-50 bg-white shadow-[0_5px_12px_rgba(8,125,62,0.08)] transition hover:shadow-[0_5px_12px_rgba(8,125,62,0.22)] transition-transform hover:-translate-y-1"
           >
             <img
               src={item.image}
